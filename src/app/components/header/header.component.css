@@ -1,0 +1,35 @@
+.header {
+    width: 100%;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 6rem;
+    cursor: pointer;
+}
+
+.nav {
+    text-transform: uppercase;
+    display: flex;
+}
+
+.nav__link {
+    color:#222222;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 100ms color ease;
+    opacity: .85;
+    margin-right: 20px;
+}
+
+.nav__link:hover {
+    color: #000;
+    opacity: 1;
+}

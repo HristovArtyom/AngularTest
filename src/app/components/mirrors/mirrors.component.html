@@ -1,0 +1,61 @@
+<div class="item">
+  <div class="container">
+    <h1 class="item__title">Название: {{ name }}</h1>
+    <h2 class="item__color">Цвет: {{ color }}</h2>
+    <h2 class="item__price">Цена: {{ price }}</h2>
+    <ul class="item__list">
+      <li class="item__size">Длина: {{ size.length }}</li>
+      <li class="item__size">Ширина: {{ size.height }}</li>
+      <li class="item__size">Глубина: {{ size.width }}</li>
+    </ul>
+    <h2 class="item__material">Материалы</h2>
+    <ul class="item__options">
+      <li class="mirrors__list" *ngFor="let option of options">{{ option }}</li>
+    </ul>
+    <h1>Выберите зеркало</h1>
+  </div>
+  <div class="mirrors">
+    <div class="mirrors__item">
+      <a href="#"
+        ><img class="mirrors__img" src="assets/img/black/black.jpg" alt="lorem"
+      /></a>
+      <div class="mirrors__content" (click)="mirrorSelect('black')">
+        <h1 class="mirrors__title">Rotonda</h1>
+        <div class="mirrors__text">Lorem ipsum dolor sit amet.</div>
+      </div>
+    </div>
+
+    <div class="mirrors__item">
+      <a href="#"
+        ><img class="mirrors__img" src="assets/img/gold/gold.jpg" alt="lorem"
+      /></a>
+      <div class="mirrors__content" (click)="mirrorSelect('gold')">
+        <h1 class="mirrors__title">Aztec</h1>
+        <div class="mirrors__text">Lorem ipsum dolor sit amet.</div>
+      </div>
+    </div>
+
+    <div class="mirrors__item">
+      <a href="#"
+        ><img
+          class="mirrors__img"
+          src="assets/img/silver/silver.jpg"
+          alt="lorem"
+      /></a>
+      <div class="mirrors__content" (click)="mirrorSelect('silver')">
+        <h1 class="mirrors__title">Mixtec</h1>
+        <div class="mirrors__text">Lorem ipsum dolor sit amet.</div>
+      </div>
+    </div>
+
+    <div class="mirrors__item">
+      <a href="#"
+        ><img class="mirrors__img" src="assets/img/beige/beige.jpg" alt="lorem"
+      /></a>
+      <div class="mirrors__content" (click)="mirrorSelect('beige')">
+        <h1 class="mirrors__title">San Rufo</h1>
+        <div class="mirrors__text">Lorem ipsum dolor sit amet.</div>
+      </div>
+    </div>
+  </div>
+</div>
