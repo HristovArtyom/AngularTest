@@ -1,9 +1,9 @@
 .container {
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    justify-content: space-between;
     background-color: #f5f5dc;
     border-bottom: 1px solid #000;
+    padding: 30px;
 }
 
 .mirrors {
@@ -46,3 +46,42 @@
     cursor: pointer;
     transition: opacity .4s ease;
 }
+
+.item__form {
+    display: flex;
+    flex-direction: column;
+    transition: opacity 1s ease;
+}
+
+input {
+    width: 300px;
+    font-size: 13px;
+    padding: 5px 0 5px 15px;
+    border: 1px solid #747474;
+    background: #F6F6f6;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+button {
+    width: 300px;
+    border: 0;
+    border-radius: 5px;
+    background: #7d9ad5;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 13px;
+  }
+
+  button:hover {
+    background: #3d61af;
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #a9abaf;
+  }
+
+  .personal__info {
+    margin-top: 15px;
+  }

@@ -11,6 +11,9 @@ export class MirrorsComponent implements OnInit {
   price: number;
   size: Size;
   options: string[];
+  individualLenght: number;
+  individualHeight: number;
+  phoneNumber: number;
 
   constructor() {}
 
@@ -24,8 +27,17 @@ export class MirrorsComponent implements OnInit {
       width: 0,
     };
     this.options = ['---', '---', '---'];
-    
+    this.individualLenght;
+    this.individualHeight;
+    this.phoneNumber;
   }
+  addNew(length, height, phone) {
+    this.individualLenght = length;
+    this.individualHeight = height;
+    this.phoneNumber = phone;
+    return false;
+  }
+
   mirrorSelect(mirrorTitle) {
     if (mirrorTitle === 'black') {
       this.name = 'Rotonda';

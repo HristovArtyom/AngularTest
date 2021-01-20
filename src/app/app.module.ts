@@ -7,13 +7,11 @@ import { MirrorsComponent} from './components/mirrors/mirrors.component';
 import { AboutComponent } from './components/about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactsComponent } from './components/contacts/contacts.component';
-import { IndividualComponent } from './components/individual/individual.component';
 import { HeaderComponent } from './components/header/header.component';
 
 const appRoutes: Routes = [
   {path: '', component: MirrorsComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'individual', component: IndividualComponent},
   {path: 'contacts', component: ContactsComponent}
 ]
 
@@ -23,7 +21,6 @@ const appRoutes: Routes = [
     MirrorsComponent,
     AboutComponent,
     ContactsComponent,
-    IndividualComponent,
     HeaderComponent    
   ],
   imports: [

@@ -1,18 +1,38 @@
 <div class="item">
   <div class="container">
-    <h1 class="item__title">Название: {{ name }}</h1>
-    <h2 class="item__color">Цвет: {{ color }}</h2>
-    <h2 class="item__price">Цена: {{ price }}</h2>
-    <ul class="item__list">
-      <li class="item__size">Длина: {{ size.length }}</li>
-      <li class="item__size">Ширина: {{ size.height }}</li>
-      <li class="item__size">Глубина: {{ size.width }}</li>
-    </ul>
-    <h2 class="item__material">Материалы</h2>
-    <ul class="item__options">
-      <li class="mirrors__list" *ngFor="let option of options">{{ option }}</li>
-    </ul>
-    <h1>Выберите зеркало</h1>
+    <div class="item__description">
+      <h1 class="item__title">Название: {{ name }}</h1>
+      <h2 class="item__color">Цвет: {{ color }}</h2>
+      <h2 class="item__price">Цена: {{ price }}</h2>
+      <ul class="item__list">
+        <li class="item__size">Длина: {{ size.length }}</li>
+        <li class="item__size">Ширина: {{ size.height }}</li>
+        <li class="item__size">Глубина: {{ size.width }}</li>
+      </ul>
+      <h2 class="item__material">Материалы</h2>
+      <ul class="item__options">
+        <li class="mirrors__list" *ngFor="let option of options">{{ option }}</li>
+      </ul>
+      <h1>Выберите зеркало</h1>
+    </div>
+    <div class="item__individual">
+      <h1>Индивидуальный размер</h1>
+      <h1>Выберите зеркало</h1>
+      <form (submit)="addNew(length.value, height.value, phone.value)">
+        <div class="item__form">          
+          <input class='form__input' type='text' id='length' placeholder="Длина" #length>
+          <input class='form__input' type='text' id='height' placeholder="Ширина" #height>
+          <input class='form__input' type='text' id='height' placeholder="Номер телефона" #phone>
+          <button class="button" type="submit">Отправить</button>
+          <div class="personal__info">
+            <h2>"Название": {{ name }}</h2>
+            <p>"Длина": {{ individualLenght }}</p>
+            <p>"Ширина": {{ individualHeight }}</p>
+            <p>"Номер телефона": {{ phoneNumber }}</p>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
   <div class="mirrors">
     <div class="mirrors__item">
