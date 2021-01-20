@@ -31,6 +31,7 @@ export class MirrorsComponent implements OnInit {
     this.individualHeight;
     this.phoneNumber;
   }
+
   addNew(length, height, phone) {
     this.individualLenght = length;
     this.individualHeight = height;

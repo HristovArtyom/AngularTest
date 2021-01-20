@@ -11,7 +11,9 @@
       </ul>
       <h2 class="item__material">Материалы</h2>
       <ul class="item__options">
-        <li class="mirrors__list" *ngFor="let option of options">{{ option }}</li>
+        <li class="mirrors__list" *ngFor="let option of options">
+          {{ option }}
+        </li>
       </ul>
       <h1>Выберите зеркало</h1>
     </div>
@@ -19,10 +21,28 @@
       <h1>Индивидуальный размер</h1>
       <h1>Выберите зеркало</h1>
       <form (submit)="addNew(length.value, height.value, phone.value)">
-        <div class="item__form">          
-          <input class='form__input' type='text' id='length' placeholder="Длина" #length>
-          <input class='form__input' type='text' id='height' placeholder="Ширина" #height>
-          <input class='form__input' type='text' id='height' placeholder="Номер телефона" #phone>
+        <div class="item__form">
+          <input
+            class="form__input"
+            type="text"
+            id="length"
+            placeholder="Длина"
+            #length
+          />
+          <input
+            class="form__input"
+            type="text"
+            id="height"
+            placeholder="Ширина"
+            #height
+          />
+          <input
+            class="form__input"
+            type="text"
+            id="height"
+            placeholder="Номер телефона"
+            #phone
+          />
           <button class="button" type="submit">Отправить</button>
           <div class="personal__info">
             <h2>"Название": {{ name }}</h2>
